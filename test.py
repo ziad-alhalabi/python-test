@@ -19,7 +19,7 @@ plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=140)
 
 plt.axis('equal')
-plt.savefig('pollution.png')
+plt.savefig('pollution2.png')
 
 
 
@@ -31,7 +31,7 @@ ax = df[['London','Liverpool']].plot(kind='bar', title ="Difference in Temperatu
 ax.set_xlabel("Date", fontsize=12)
 ax.set_ylabel("Temperature", fontsize=12)
 
-plt.savefig('temperature.png')
+plt.savefig('temperature2.png')
 
 
 print("London Weather:")
