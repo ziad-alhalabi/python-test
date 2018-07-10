@@ -3,9 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-newpath = r'results'
-if not os.path.exists(newpath):
-    os.makedirs(newpath)
+#newpath = r'results'
+#if not os.path.exists(newpath):
+#    os.makedirs(newpath)
 
 
 # Data to plot
@@ -19,7 +19,7 @@ plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=140)
 
 plt.axis('equal')
-plt.savefig('results/pollution.png')
+plt.savefig('pollution.png')
 
 
 
@@ -31,7 +31,7 @@ ax = df[['London','Liverpool']].plot(kind='bar', title ="Difference in Temperatu
 ax.set_xlabel("Date", fontsize=12)
 ax.set_ylabel("Temperature", fontsize=12)
 
-plt.savefig('results/temperature.png')
+plt.savefig('temperature.png')
 
 
 print("London Weather:")
