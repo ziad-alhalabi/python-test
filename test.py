@@ -5,7 +5,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("datasets/weather_data.csv")
+df = pd.read_csv("weather_data.csv")
 
 newpath = r'results'
 if not os.path.exists(newpath):
