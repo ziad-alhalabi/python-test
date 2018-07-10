@@ -1,6 +1,39 @@
+import json
+from pprint import pprint
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("datasets/weather_data.csv")
+
+print("Minimum Temperature Summary:")
+print(df['minTemp'].describe())
 
 
-a = 10
-b = 5
-c = a + b
-print("sum= ", str(c))
+
+fig = plt.figure()
+ax = plt.subplot(111)
+ax.plot(df['time'], df['minTemp'])
+plt.xlabel("Date")
+plt.ylabel("Temperature")
+plt.title("Minimum Temperature per day for June")
+
+
+fig.savefig('results/minTemperature.png')
+
+
+
+
+print("Maximum Temperature Summary:")
+print(df['maxTemp'].describe())
+
+
+
+fig = plt.figure()
+ax = plt.subplot(111)
+ax.plot(df['time'], df['maxTemp'])
+plt.xlabel("Date")
+plt.ylabel("Temperature")
+plt.title("Maximum Temperature per day for June")
+
+
+fig.savefig('results/maxTemperature.png')
